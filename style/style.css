@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+ body {
+    font-family: Arial, sans-serif;
+}
+.clip {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card{
+    position: fixed;
+    top: 0;
+    left: calc(100% - 300px);
+    width: 300px;
+    background-color: bisque;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.card h1{
+    color: yellow;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .checkout{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+

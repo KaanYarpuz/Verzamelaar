@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Video Clip</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+<div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+    <h1 class="text-2xl font-semibold mb-4 text-center">Add a Video Clip</h1>
+    <form action="backend/process.php" method="post" enctype="multipart/form-data">
+        <div class="mb-4">
+            <label for="title" class="block text-sm font-medium text-gray-700">Title:</label>
+            <input type="text" id="title" name="title" class="mt-1 p-2 block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-200" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="description" class="block text-sm font-medium text-gray-700">Description:</label>
+            <textarea id="description" name="description" rows="4" class="mt-1 p-2 block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-200" required></textarea>
+        </div>
+
+        <div class="mb-4">
+            <label for="creator" class="block text-sm font-medium text-gray-700">Created by:</label>
+            <input type="text" id="creator" name="creator" class="mt-1 p-2 block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-200" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="video" class="block text-sm font-medium text-gray-700">Upload Video (MP4):</label>
+            <input type="file" id="video" name="video" accept=".mp4" class="mt-1 p-2 block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-200" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="price" class="block text-sm font-medium text-gray-700">Price:</label>
+            <input type="number" id="price" name="price" class="mt-1 p-2 block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-200" required>
+        </div>
+
+        <div class="text-center">
+            <input type="submit" value="Add Clip" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer">
+        </div>
+    </form>
+</div>
+</body>
+</html>
