@@ -13,20 +13,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $videoPath = $videoDirectory . basename($_FILES["video"]["name"]);
 
     if (move_uploaded_file($_FILES["video"]["tmp_name"], $videoPath)) {
-        // File uploaded successfully, insert data into the database
+        // File uploaded successfully, insert data into the database using prepared statements
         $title = $_POST["title"];
         $description = $_POST["description"];
         $creator = $_POST["creator"];
         $price = $_POST["price"];
 
+        // Prepare the SQL statement with placeholders
         $sql = "INSERT INTO videos (title, description, creator, price, video_path)
-                VALUES ('$title', '$description', '$creator', $price, '$videoPath')";
+                VALUES (?, ?, ?, ?, ?)";
 
-        if ($conn->query($sql) === TRUE) {
-            echo "Video added successfully!";
+        // Create a prepared statement
+        $stmt = $conn->prepare($sql);
+
+        // Bind parameters
+        $stmt->bind_param("sssis", $title, $description, $creator, $price, $videoPath);
+
+        if ($stmt->execute()) {
+            header('Location: clip.php');
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $stmt->error;
         }
+
+        // Close the prepared statement
+        $stmt->close();
     } else {
         echo "Error uploading the video.";
     }

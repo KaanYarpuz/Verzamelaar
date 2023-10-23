@@ -1,11 +1,13 @@
 <?php
 
+// Connect to the database (replace with your database credentials)
 $conn = new mysqli("localhost", "contact", "9O4?3p0ky", "Database89530");
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Fetch video data from the database
 $sql = "SELECT title, description, creator, price, video_path FROM videos";
 $result = $conn->query($sql);
 
