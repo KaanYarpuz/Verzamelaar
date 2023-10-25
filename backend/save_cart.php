@@ -1,11 +1,9 @@
 <?php
-// Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include 'database.php';
 
     $data = json_decode(file_get_contents("php://input"));
 
-    // Extract cart name and items
     $cartName = $data->cartName;
     $items = $data->items;
 

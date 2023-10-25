@@ -1,11 +1,13 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
 
- body {
+body {
     font-family: Arial, sans-serif;
 }
+
 .clip {
     margin: 20px;
     padding: 10px;
@@ -13,7 +15,7 @@ html, body {
     border-radius: 5px;
 }
 
-.card{
+.card {
     position: fixed;
     top: 0;
     left: calc(100% - 300px);
@@ -23,7 +25,7 @@ html, body {
     transition: 0.5s;
 }
 
-.card h1{
+.card h1 {
     color: yellow;
     font-weight: 100;
     margin: 0;
@@ -33,7 +35,7 @@ html, body {
     align-items: center;
 }
 
-.card .checkout{
+.card .checkout {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -41,18 +43,19 @@ html, body {
     grid-template-columns: repeat(2, 1fr);
 
 }
- .cart-container {
-     position: fixed;
-     top: 20px;
-     right: 20px;
-     width: 350px;
-     height: 400px;
-     border: 1px solid #ccc;
-     border-radius: 5px;
-     background-color: white;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-     overflow-y: auto;
- }
+
+.cart-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 350px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
 
 .cart-item {
     display: flex;
