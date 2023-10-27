@@ -46,7 +46,7 @@ body {
 
 .cart-container {
     position: fixed;
-    top: 20px;
+    top: 65px;
     right: 20px;
     width: 350px;
     height: 400px;
@@ -77,4 +77,12 @@ body {
 
 .items:last-child {
     margin-right: 0;
+}
+
+
+
+svg{
+    position: relative;
+    bottom: 0;
+    left: 0;
 }

@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("sssis", $title, $description, $creator, $price, $videoPath);
 
         if ($stmt->execute()) {
-            header('Location: clip.php');
+            header('Location: sneaker.php');
         } else {
             echo "Error: " . $stmt->error;
         }

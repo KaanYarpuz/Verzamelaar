@@ -8,13 +8,25 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+<body class="bg-gray-100 min-h-screen flex flex-col">
 
-    <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
-        <h1 class="text-2xl font-semibold mb-4 text-center">Add a Video Clip</h1>
+    <nav class="text-white py-4" style="background-color: #b21031">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-semibold">Sneakers Showcase</h1>
+            <ul class="flex space-x-4">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="backend/sneaker.php">Sneakers</a></li>
+                <li><a href="add.html">Toevoegen</a></li>
+                <li><a href="verwijder.html">Verwijderen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md m-auto mt-50 ">
+        <h1 class="text-2xl font-semibold mb-4 text-center">Voeg een sneaker toe</h1>
         <form action="backend/process.php" method="post" enctype="multipart/form-data">
             <div class="mb-4">
-                <label for="title" class="block text-sm font-medium text-gray-700">Title:</label>
+                <label for="title" class="block text-sm font-medium text-gray-700">Titel:</label>
                 <input type="text" id="title" name="title"
                     class="mt-1 p-2 block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-200"
                     required>
@@ -28,7 +40,7 @@
             </div>
 
             <div class="mb-4">
-                <label for="creator" class="block text-sm font-medium text-gray-700">Created by:</label>
+                <label for="creator" class="block text-sm font-medium text-gray-700">Gemaakt door:</label>
                 <input type="text" id="creator" name="creator"
                     class="mt-1 p-2 block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-200"
                     required>
@@ -42,15 +54,15 @@
             </div>
 
             <div class="mb-4">
-                <label for="price" class="block text-sm font-medium text-gray-700">Price:</label>
+                <label for="price" class="block text-sm font-medium text-gray-700">Prijs:</label>
                 <input type="number" id="price" name="price"
                     class="mt-1 p-2 block w-full rounded-md border border-gray-300 focus:ring focus:ring-blue-200"
                     required>
             </div>
 
             <div class="text-center">
-                <input type="submit" value="Add Clip"
-                    class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer">
+                <input type="submit" value="Voeg sneaker toe"
+                    class="px-4 py-2 text-white rounded-md hover:bg-blue-600 cursor-pointer" style="background-color: #b21031">
             </div>
         </form>
     </div>
